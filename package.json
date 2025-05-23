@@ -1,0 +1,26 @@
+{
+  "name": "smhb-workers",
+  "version": "1.0.0",
+  "description": "Worker processes for SMHB",
+  "main": "dist-worker/index.js",
+  "scripts": {
+    "build": "npx tsc --project tsconfig.worker.json",
+    "start": "node dist-worker/index.js"
+  },
+  "dependencies": {
+    "bullmq": "latest",
+    "@supabase/supabase-js": "latest",
+    "node-fetch": "latest",
+    "@aws-sdk/client-s3": "latest",
+    "@aws-sdk/s3-request-presigner": "latest",
+    "csv-parse": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "@types/node": "latest",
+    "@types/node-fetch": "latest"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
